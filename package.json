@@ -2,6 +2,9 @@
   "name": "yelpin",
   "version": "0.0.1",
   "description": "Yelp for DIY",
+  "engines": {
+    "node": "^5.4.1"
+  },
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -49,6 +52,7 @@
     "mongodb": "^2.1.4",
     "mongoose": "^4.3.5",
     "morgan": "^1.6.1",
+    "ng-file-upload": "^11.2.3",
     "node": "0.0.0",
     "nodemon": "^1.8.1",
     "path": "^0.12.7",

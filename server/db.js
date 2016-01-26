@@ -4,9 +4,9 @@ var Salt_Factor = 10;
 var Q = require('q');
 var mongoURI = 'mongodb://diyelpin:Beansandburrito1600@ds047335.mongolab.com:47335/heroku_ws06b5hx';
 
- // mongoose.connect(process.env.MONGOLAB_URI || mongoURI);
+ mongoose.connect(process.env.MONGOLAB_URI || mongoURI);
 
-mongoose.connect('mongodb://localhost/yelpin');
+// mongoose.connect('mongodb://localhost/yelpin');
 
 var db = mongoose.connection;
 
@@ -68,10 +68,10 @@ exports.createUser = function(obj) {
       var user = new User(obj);
       user.save(function(err, user) {
         if (err) {
-          console.log('DB CREATEUSER ERROR', err)
+          console.log('DB CREATEUSER ERROR', err);
           defer.resolve(false);
         } else {
-          console.log('DB CREATE USER SUCCESS')
+          console.log('DB CREATE USER SUCCESS');
           defer.resolve(user);
         }
       });
